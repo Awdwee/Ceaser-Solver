@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 std::string CeaserCypher(std::string cypherText, int shiftAmount);
 
@@ -32,7 +33,7 @@ std::string CeaserCypher(std::string cypherText, int shiftAmount){
     char letter;
     for(int i = 0; i < cypherText.length(); i++){
         if(cypherText[i] + shiftAmount > 126){
-            clearText += 32 + shiftAmount - (int) cypherText.length();
+            clearText += abs(shiftAmount - (127 - cypherText[i])) + 32;
         }
         else
             clearText += cypherText[i] + shiftAmount;
