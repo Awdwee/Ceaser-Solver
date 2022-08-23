@@ -24,7 +24,7 @@ int main(){
  * 
  * @param cypherText the cypher text to be shifted
  * @param shiftAmount the amount each letter will be shifted by
- * @return std::string clearText the shifted text
+ * @return std::string clearText the shifted  text
  */
 std::string CeaserCypher(std::string cypherText, int shiftAmount){
     std::string clearText = "";
